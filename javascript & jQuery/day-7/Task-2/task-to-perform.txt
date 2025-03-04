@@ -1,0 +1,43 @@
+Hello all Trainees! 🚀
+
+
+🌟 Day 7 Tasks 🌟
+
+
+🔹 Task 2: User Registration Form 📝
+
+You need to create a form with the following fields:
+
+✅ Username
+
+✅ Email
+
+✅ Password
+
+✅ Mobile Number
+
+✅ Bio
+
+✅ Profile Photo
+
+
+🔹 Backend Details:
+
+📌 Server Variable Names:
+
+UserName
+EmailAddress
+Password
+MobileNumber
+Bio
+ProfilePhotoFile
+
+📌 Validations Required: Ensure each field follows its respective format.
+
+
+📌 Submission URL:
+
+🌍 POST data to 👉 http://192.168.1.222:1111/api/User/SaveUserDetails
+
+
+🚀 Let’s build something amazing! Happy Coding! 💻🔥

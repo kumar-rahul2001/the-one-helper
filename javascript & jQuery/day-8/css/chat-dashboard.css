@@ -1,0 +1,81 @@
+.chat-container {
+  height: 100vh;
+}
+
+.left-side {
+  width: 350px;
+  background-color: #4a58ff;
+}
+.chat-list-container {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat-user {
+  background-color: #ffffffc7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-profile {
+  overflow: hidden;
+  /* object-fit: contain; */
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.user-profile,
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.chat {
+  background-color: #c4c9ff;
+}
+
+.nav {
+  background-color: #ffffff;
+  padding: 5px;
+  height: 80px;
+  box-shadow: 0 2px 5px  gray;
+}
+
+.chat-body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.footer {
+  background-color: #ffffff;
+  height: 80px;
+}
+
+/* width */
+/* ::-webkit-scrollbar {
+    width: 5px;
+  } */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    background: #4a58ff;
+  } */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: #ffffffc7;
+  } */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } */
+
+/* hover-bg: #724ff9;
+  default-bg:#f9f7fc;
+  chat-list-bg:#f2efff;
+  chat-gg:#f4f4fa; */

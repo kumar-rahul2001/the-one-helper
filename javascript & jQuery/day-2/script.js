@@ -1,53 +1,94 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const numberInput = document.querySelector("input[type='number']");
-  const triangleSelect = document.querySelector("select");
-  const outputDiv = document.querySelector(".bg-primary");
+  // Task 1: Print Triangle
+  document
+    .querySelector(".btn-outline-primary")
+    .addEventListener("click", function () {
+      const numberInput = document.querySelector("input[type=number]").value;
+      const selectOption = document.querySelector("select").value;
+      const resultDiv = document.querySelector(".display-triangle");
+      let output = "";
+      const n = parseInt(numberInput);
 
-  function generateTriangle(rows, type) {
-    let result = "";
+      if (isNaN(n) || n <= 0) {
+        Swal.fire("Error", "Please enter a valid positive number!", "error");
+        return;
+      }
 
-    switch (type) {
-      case "left-triangle":
-        for (let i = 1; i <= rows; i++) {
-          result += "*".repeat(i) + "<br>";
-        }
-        break;
+      switch (selectOption) {
+        case "left-triangle":
+          for (let i = 1; i <= n; i++) {
+            output += "* ".repeat(i) + "<br>";
+          }
+          break;
+        case "reverse-left-triangle":
+          for (let i = n; i >= 1; i--) {
+            output += "* ".repeat(i) + "<br>";
+          }
+          break;
+        case "right-triangle":
+          for (let i = 1; i <= n; i++) {
+            output += "&nbsp;".repeat(n - i) + "*".repeat(i) + "<br>";
+          }
+          break;
+        case "reverse-right-triangle":
+          for (let i = n; i >= 1; i--) {
+            output += "&nbsp;".repeat(n - i) + "*".repeat(i) + "<br>";
+          }
+          break;
+        default:
+          Swal.fire("Error", "Please select a triangle type!", "error");
+          return;
+      }
+      resultDiv.innerHTML = output;
+    });
 
-      case "reverse-left-triangle":
-        for (let i = rows; i >= 1; i--) {
-          result += "*".repeat(i) + "<br>";
-        }
-        break;
+  // Task 2: Find Largest Number
+  document
+    .querySelectorAll(".btn-outline-primary")[1]
+    .addEventListener("click", function () {
+      const numberInput = document.querySelectorAll(
+        ".largest-number-input"
+      ).value;
+      console.log(numberInput);
+      const numbers = numberInput
+        .split(",")
+        .map((num) => parseFloat(num.trim()));
 
-      case "right-triangle":
-        for (let i = 1; i <= rows; i++) {
-          result += "&nbsp;".repeat((rows - i) * 2) + "*".repeat(i) + "<br>";
-        }
-        break;
+      if (numbers.length !== 5 || numbers.some(isNaN)) {
+        Swal.fire(
+          "Error",
+          "Please enter exactly five valid numbers separated by commas!",
+          "error"
+        );
+        return;
+      }
 
-      case "reverse-right-triangle":
-        for (let i = rows; i >= 1; i--) {
-          result += "&nbsp;".repeat((rows - i) * 2) + "*".repeat(i) + "<br>";
-        }
-        break;
+      const maxNumber = Math.max(...numbers);
+      Swal.fire(
+        "Largest Number",
+        `The largest number is: ${maxNumber}`,
+        "success"
+      );
+    });
 
-      default:
-        result = "Please select a valid triangle type";
-    }
+  // Task 3: Detect Data Type
+  document
+    .querySelectorAll(".btn-outline-primary")[2]
+    .addEventListener("click", function () {
+      const inputData = document.querySelectorAll("input[type=text]")[0].value;
+      let dataType;
 
-    outputDiv.innerHTML = result;
-  }
+      if (!isNaN(inputData) && inputData.trim() !== "") {
+        dataType = "Number";
+      } else if (
+        inputData.toLowerCase() === "true" ||
+        inputData.toLowerCase() === "false"
+      ) {
+        dataType = "Boolean";
+      } else {
+        dataType = "String";
+      }
 
-  function updateTriangle() {
-    const rows = parseInt(numberInput.value, 10);
-    const type = triangleSelect.value;
-    if (!isNaN(rows) && rows > 0 && type) {
-      generateTriangle(rows, type);
-    } else {
-      outputDiv.innerHTML = "Show triangle here";
-    }
-  }
-
-  numberInput.addEventListener("input", updateTriangle);
-  triangleSelect.addEventListener("change", updateTriangle);
+      Swal.fire("Data Type", `The entered data type is: ${dataType}`, "info");
+    });
 });

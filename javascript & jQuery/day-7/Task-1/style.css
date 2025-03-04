@@ -1,0 +1,13 @@
+.form-container {
+  width: 800px;
+  background: #b3adfd;
+  border-radius: 10px;
+}
+
+.profile-pic,
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}

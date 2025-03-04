@@ -1,0 +1,16 @@
+-->chat app
+Add sidebar to the chat app.
+Fix the ui shift in large chat. (done)
+Fix the sidebar shift. (done)
+Add the current chat to the workspace when it is logged in with different user.
+Add the date, roomid and room name a proper name to the ui.(done)
+
+-->profile card
+Save photo as base64 to the localStorage.
+and perform edit
+
+-->day-3 SQL done
+Complete the left two task now.
+
+--day-2 javascript task
+Finish the left javascript task this week or on holiays.

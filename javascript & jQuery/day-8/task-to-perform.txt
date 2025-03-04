@@ -1,0 +1,39 @@
+🚀 Hi all Trainees,
+
+
+Here's your final jQuery task – time to build an interactive chat widget using AJAX! 🎯💬
+
+
+🔗 API Documentation: http://192.168.1.222:1111/swagger/index.html
+
+
+🛠 Your Task:
+
+Create a WhatsApp-like chat widget with the following functionalities:
+
+
+✅ User Management 👤
+
+🔹 Create a user ➝ /api/User/SaveUserDetails
+🔹 Login with user credentials ➝ /api/User/LoginUser
+
+✅ Room Management 🚪
+
+🔹 Create a chat room ➝ /api/Room/SaveRoomDetails
+🔹 Join an existing room ➝ /api/Room/JoinRoom
+🔹 List all joined/created rooms ➝ /api/Room/GetAllRooms
+🔹 Get details of a specific room ➝ /api/Room/GetRoomDetails
+
+✅ Chat Functionality 💬
+
+🔹 Send a message ➝ /api/Chat/SendChat
+🔹 Retrieve all chats of a room ➝ /api/Chat/GetAllChat
+
+⚡ Important Notes:
+
+🔐 Some APIs require authorization – handle authentication properly!
+
+🎨 The design should be interactive and engaging, similar to WhatsApp!
+
+
+Good luck! 🚀💡 Let’s see some awesome chat widgets! 💪🔥

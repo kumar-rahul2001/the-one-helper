@@ -1,0 +1,30 @@
+Hello all Trainees! 🚀
+
+
+🌟 Day 7 Tasks 🌟
+
+
+🔹 Task 1: Profile Card Enhancement 🏷️
+
+You need to create a form with the following fields:
+
+✅ Username
+
+✅ Image
+
+✅ Bio
+
+
+🔹 Features to Implement:
+
+✨ When you save the details, a profile card should be displayed (similar to your previous task).
+
+🛠️ New Functionalities:
+
+✔ Edit & Delete options for each profile.
+
+💾 Store data in local storage, so when a user revisits, all saved profiles should be restored.
+
+🎭 Add smooth animations & transitions for a great user experience.
+
+🛑 Implement validations to ensure accurate data entry.
